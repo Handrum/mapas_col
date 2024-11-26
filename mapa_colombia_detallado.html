@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f42329fbc34fdc0d55e098a3987a7b88 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f42329fbc34fdc0d55e098a3987a7b88" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f42329fbc34fdc0d55e098a3987a7b88 = L.map(
+                "map_f42329fbc34fdc0d55e098a3987a7b88",
+                {
+                    center: [4.570868, -74.297333],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b355aa1061eaa2106a4a2694b26f795c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b355aa1061eaa2106a4a2694b26f795c.addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var heat_map_28d5edbc781ef712209526fd0284867a = L.heatLayer(
+                [[7.119, -73.132, 30], [7.212, -72.922, 20], [1.208, -77.281, 50], [1.152, -77.267, 35], [3.421, -76.532, 70], [3.436, -76.528, 60], [2.455, -76.612, 40], [2.442, -76.629, 25]],
+                {"blur": 10, "maxZoom": 12, "minOpacity": 0.5, "radius": 15}
+            );
+        
+    
+            heat_map_28d5edbc781ef712209526fd0284867a.addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var marker_babf47d43d37cddea7db5eed5b890074 = L.marker(
+                [7.119, -73.132],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_f57afa939a3008fce723c8fee082b56c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_babf47d43d37cddea7db5eed5b890074.setIcon(icon_f57afa939a3008fce723c8fee082b56c);
+        
+    
+        var popup_5c9af611aa25408fca0ca316e40320c8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe4fd18f90cc8be3d53bde5ecf07ba96 = $(`<div id="html_fe4fd18f90cc8be3d53bde5ecf07ba96" style="width: 100.0%; height: 100.0%;">     <strong>Zona Santander 1</strong><br>     Latitud: 7.119<br>     Longitud: -73.132<br>     Hurtos: 30     </div>`)[0];
+                popup_5c9af611aa25408fca0ca316e40320c8.setContent(html_fe4fd18f90cc8be3d53bde5ecf07ba96);
+            
+        
+
+        marker_babf47d43d37cddea7db5eed5b890074.bindPopup(popup_5c9af611aa25408fca0ca316e40320c8)
+        ;
+
+        
+    
+    
+            var marker_313816394a6f10da4cd4872e97e7281c = L.marker(
+                [7.212, -72.922],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_ef4e719db31dc9669db21a3fe1932d0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_313816394a6f10da4cd4872e97e7281c.setIcon(icon_ef4e719db31dc9669db21a3fe1932d0d);
+        
+    
+        var popup_5867ee51411c7754e691aa4b5cf88abc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_186563c48ca66ea846bad09c68f263d3 = $(`<div id="html_186563c48ca66ea846bad09c68f263d3" style="width: 100.0%; height: 100.0%;">     <strong>Zona Santander 2</strong><br>     Latitud: 7.212<br>     Longitud: -72.922<br>     Hurtos: 20     </div>`)[0];
+                popup_5867ee51411c7754e691aa4b5cf88abc.setContent(html_186563c48ca66ea846bad09c68f263d3);
+            
+        
+
+        marker_313816394a6f10da4cd4872e97e7281c.bindPopup(popup_5867ee51411c7754e691aa4b5cf88abc)
+        ;
+
+        
+    
+    
+            var marker_eb75ab1ed9dd03d577c00b2729cc0d90 = L.marker(
+                [1.208, -77.281],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_964c6a491b67c47d6243708ca008c79a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_eb75ab1ed9dd03d577c00b2729cc0d90.setIcon(icon_964c6a491b67c47d6243708ca008c79a);
+        
+    
+        var popup_d863936bc9432459c907e688381a5aa6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b48515b0f4bac1325b337b3e317f7b63 = $(`<div id="html_b48515b0f4bac1325b337b3e317f7b63" style="width: 100.0%; height: 100.0%;">     <strong>Zona Nariño 1</strong><br>     Latitud: 1.208<br>     Longitud: -77.281<br>     Hurtos: 50     </div>`)[0];
+                popup_d863936bc9432459c907e688381a5aa6.setContent(html_b48515b0f4bac1325b337b3e317f7b63);
+            
+        
+
+        marker_eb75ab1ed9dd03d577c00b2729cc0d90.bindPopup(popup_d863936bc9432459c907e688381a5aa6)
+        ;
+
+        
+    
+    
+            var marker_03267f0965d82b568cbac9824c9be2cf = L.marker(
+                [1.152, -77.267],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_4137126d4525ba087c44f7cab5ed124e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_03267f0965d82b568cbac9824c9be2cf.setIcon(icon_4137126d4525ba087c44f7cab5ed124e);
+        
+    
+        var popup_ee00c1999aee13f0488370d601f7b3f1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_885dffb400722c145d6bed9482e4fc0c = $(`<div id="html_885dffb400722c145d6bed9482e4fc0c" style="width: 100.0%; height: 100.0%;">     <strong>Zona Nariño 2</strong><br>     Latitud: 1.152<br>     Longitud: -77.267<br>     Hurtos: 35     </div>`)[0];
+                popup_ee00c1999aee13f0488370d601f7b3f1.setContent(html_885dffb400722c145d6bed9482e4fc0c);
+            
+        
+
+        marker_03267f0965d82b568cbac9824c9be2cf.bindPopup(popup_ee00c1999aee13f0488370d601f7b3f1)
+        ;
+
+        
+    
+    
+            var marker_61c184ecfadca0a63e3a06a369f0664b = L.marker(
+                [3.421, -76.532],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_f18fb57bfb3a2a1fcf1f06ed358aa2ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_61c184ecfadca0a63e3a06a369f0664b.setIcon(icon_f18fb57bfb3a2a1fcf1f06ed358aa2ce);
+        
+    
+        var popup_878c9343f5bfc973ec28b9a57ffa0f01 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_68bd1b6c1d17e3137ae634f6a2f452d7 = $(`<div id="html_68bd1b6c1d17e3137ae634f6a2f452d7" style="width: 100.0%; height: 100.0%;">     <strong>Zona Valle del Cauca 1</strong><br>     Latitud: 3.421<br>     Longitud: -76.532<br>     Hurtos: 70     </div>`)[0];
+                popup_878c9343f5bfc973ec28b9a57ffa0f01.setContent(html_68bd1b6c1d17e3137ae634f6a2f452d7);
+            
+        
+
+        marker_61c184ecfadca0a63e3a06a369f0664b.bindPopup(popup_878c9343f5bfc973ec28b9a57ffa0f01)
+        ;
+
+        
+    
+    
+            var marker_d21a47ff2877f0ec1a785a49c67c0749 = L.marker(
+                [3.436, -76.528],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_e2700bc4032d318f36653bb9d7fe65a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d21a47ff2877f0ec1a785a49c67c0749.setIcon(icon_e2700bc4032d318f36653bb9d7fe65a0);
+        
+    
+        var popup_b9964bcf640448fc183feacd7f83f998 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_033a204e9913eb30e1238518364409c6 = $(`<div id="html_033a204e9913eb30e1238518364409c6" style="width: 100.0%; height: 100.0%;">     <strong>Zona Valle del Cauca 2</strong><br>     Latitud: 3.436<br>     Longitud: -76.528<br>     Hurtos: 60     </div>`)[0];
+                popup_b9964bcf640448fc183feacd7f83f998.setContent(html_033a204e9913eb30e1238518364409c6);
+            
+        
+
+        marker_d21a47ff2877f0ec1a785a49c67c0749.bindPopup(popup_b9964bcf640448fc183feacd7f83f998)
+        ;
+
+        
+    
+    
+            var marker_c57bbfb9ab77722b2d9e63415353f213 = L.marker(
+                [2.455, -76.612],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_c9b202ff0ce802f6e5bd5f22b1730c05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c57bbfb9ab77722b2d9e63415353f213.setIcon(icon_c9b202ff0ce802f6e5bd5f22b1730c05);
+        
+    
+        var popup_48e240d2a8415195ede3454965db52a2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5b55fd091b062062d23d54890d7cb8ea = $(`<div id="html_5b55fd091b062062d23d54890d7cb8ea" style="width: 100.0%; height: 100.0%;">     <strong>Zona Cauca 1</strong><br>     Latitud: 2.455<br>     Longitud: -76.612<br>     Hurtos: 40     </div>`)[0];
+                popup_48e240d2a8415195ede3454965db52a2.setContent(html_5b55fd091b062062d23d54890d7cb8ea);
+            
+        
+
+        marker_c57bbfb9ab77722b2d9e63415353f213.bindPopup(popup_48e240d2a8415195ede3454965db52a2)
+        ;
+
+        
+    
+    
+            var marker_637443b33ca1eda3dff22bb2ba16a746 = L.marker(
+                [2.442, -76.629],
+                {}
+            ).addTo(map_f42329fbc34fdc0d55e098a3987a7b88);
+        
+    
+            var icon_23019dce3956c8154acaea540aed8987 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_637443b33ca1eda3dff22bb2ba16a746.setIcon(icon_23019dce3956c8154acaea540aed8987);
+        
+    
+        var popup_f2c3cf621da3ec647865f3ae51832a7e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a43a2e4cc26135f032aef213826eeb40 = $(`<div id="html_a43a2e4cc26135f032aef213826eeb40" style="width: 100.0%; height: 100.0%;">     <strong>Zona Cauca 2</strong><br>     Latitud: 2.442<br>     Longitud: -76.629<br>     Hurtos: 25     </div>`)[0];
+                popup_f2c3cf621da3ec647865f3ae51832a7e.setContent(html_a43a2e4cc26135f032aef213826eeb40);
+            
+        
+
+        marker_637443b33ca1eda3dff22bb2ba16a746.bindPopup(popup_f2c3cf621da3ec647865f3ae51832a7e)
+        ;
+
+        
+    
+</script>
+</html>
