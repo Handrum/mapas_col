@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8a002496216799ea5332cfe94e6c9b41 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8a002496216799ea5332cfe94e6c9b41" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8a002496216799ea5332cfe94e6c9b41 = L.map(
+                "map_8a002496216799ea5332cfe94e6c9b41",
+                {
+                    center: [4.570868, -74.297333],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1db1f870bf00d15018ed6022746fe165 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_1db1f870bf00d15018ed6022746fe165.addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var tile_layer_a7792aef763fecb54861774a40da057a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a7792aef763fecb54861774a40da057a.addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var tile_layer_c5c8e7c0f661aafb79245e82af2d8a55 = L.tileLayer(
+                "http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by Stamen Design, CC BY 3.0 \u2014 Map data \u00a9 OpenStreetMap contributors", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_c5c8e7c0f661aafb79245e82af2d8a55.addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var tile_layer_ad4a81d7941096952dbda6519ca92139 = L.tileLayer(
+                "http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by Stamen Design, CC BY 3.0 \u2014 Map data \u00a9 OpenStreetMap contributors", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_ad4a81d7941096952dbda6519ca92139.addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var tile_layer_a6f336f0ddd2bb358df7e1a1de869d66 = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {"attribution": "Map data \u00a9 OpenStreetMap contributors, SRTM | Map style: \u00a9 OpenTopoMap (CC-BY-SA)", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a6f336f0ddd2bb358df7e1a1de869d66.addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var heat_map_46f479892483061634784d26c07cce18 = L.heatLayer(
+                [[7.119, -73.132, 30], [7.212, -72.922, 20], [1.208, -77.281, 50], [1.152, -77.267, 35], [3.421, -76.532, 70], [3.436, -76.528, 60], [2.455, -76.612, 40], [2.442, -76.629, 25]],
+                {"blur": 10, "maxZoom": 12, "minOpacity": 0.5, "radius": 15}
+            );
+        
+    
+            heat_map_46f479892483061634784d26c07cce18.addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var marker_2a857ed3fec9aa77deef41ba68c015c8 = L.marker(
+                [7.119, -73.132],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_c8ad8c218193bc58ee5a616d0bc96570 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "flag", "iconColor": "red", "markerColor": "white", "prefix": "glyphicon"}
+            );
+            marker_2a857ed3fec9aa77deef41ba68c015c8.setIcon(icon_c8ad8c218193bc58ee5a616d0bc96570);
+        
+    
+        var popup_2f50db4c44f7913786ebde75793fca1a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d77770757df3e6237e7e0fa0239e079b = $(`<div id="html_d77770757df3e6237e7e0fa0239e079b" style="width: 100.0%; height: 100.0%;">     <strong>Zona Santander 1</strong><br>     Latitud: 7.119<br>     Longitud: -73.132<br>     Hurtos: 30     </div>`)[0];
+                popup_2f50db4c44f7913786ebde75793fca1a.setContent(html_d77770757df3e6237e7e0fa0239e079b);
+            
+        
+
+        marker_2a857ed3fec9aa77deef41ba68c015c8.bindPopup(popup_2f50db4c44f7913786ebde75793fca1a)
+        ;
+
+        
+    
+    
+            var marker_5af8618875e8432a3881aced8b1451bb = L.marker(
+                [7.212, -72.922],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_d61e2f7d33a5c8ec26080f60f77135a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5af8618875e8432a3881aced8b1451bb.setIcon(icon_d61e2f7d33a5c8ec26080f60f77135a8);
+        
+    
+        var popup_ef0a8a1c4ed8da89acb6077af71aa6ee = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b9adceec1d6345b29fecb53563da7aa = $(`<div id="html_3b9adceec1d6345b29fecb53563da7aa" style="width: 100.0%; height: 100.0%;">     <strong>Zona Santander 2</strong><br>     Latitud: 7.212<br>     Longitud: -72.922<br>     Hurtos: 20     </div>`)[0];
+                popup_ef0a8a1c4ed8da89acb6077af71aa6ee.setContent(html_3b9adceec1d6345b29fecb53563da7aa);
+            
+        
+
+        marker_5af8618875e8432a3881aced8b1451bb.bindPopup(popup_ef0a8a1c4ed8da89acb6077af71aa6ee)
+        ;
+
+        
+    
+    
+            var marker_104ac9d0c09104a9c3c4925dac324a6b = L.marker(
+                [1.208, -77.281],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_27c808a16a18f72301ec6073c9686cca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_104ac9d0c09104a9c3c4925dac324a6b.setIcon(icon_27c808a16a18f72301ec6073c9686cca);
+        
+    
+        var popup_af3551c58c737165b1f6342651b7bb24 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d11e5ad22ec4b00dbff52eed2cc2721a = $(`<div id="html_d11e5ad22ec4b00dbff52eed2cc2721a" style="width: 100.0%; height: 100.0%;">     <strong>Zona Nariño 1</strong><br>     Latitud: 1.208<br>     Longitud: -77.281<br>     Hurtos: 50     </div>`)[0];
+                popup_af3551c58c737165b1f6342651b7bb24.setContent(html_d11e5ad22ec4b00dbff52eed2cc2721a);
+            
+        
+
+        marker_104ac9d0c09104a9c3c4925dac324a6b.bindPopup(popup_af3551c58c737165b1f6342651b7bb24)
+        ;
+
+        
+    
+    
+            var marker_524028d507acb2afd73a5030660ee7f0 = L.marker(
+                [1.152, -77.267],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_4df7738d1868900b6cd2ccf64ecf1320 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_524028d507acb2afd73a5030660ee7f0.setIcon(icon_4df7738d1868900b6cd2ccf64ecf1320);
+        
+    
+        var popup_63031191b25483137af4d00f4b76281f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_198f7fc54836232df36c187757462f0f = $(`<div id="html_198f7fc54836232df36c187757462f0f" style="width: 100.0%; height: 100.0%;">     <strong>Zona Nariño 2</strong><br>     Latitud: 1.152<br>     Longitud: -77.267<br>     Hurtos: 35     </div>`)[0];
+                popup_63031191b25483137af4d00f4b76281f.setContent(html_198f7fc54836232df36c187757462f0f);
+            
+        
+
+        marker_524028d507acb2afd73a5030660ee7f0.bindPopup(popup_63031191b25483137af4d00f4b76281f)
+        ;
+
+        
+    
+    
+            var marker_dd7d7a5f3a28358d692ff7dc4616e507 = L.marker(
+                [3.421, -76.532],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_c5350d8fefb4d21569c18d1a60d5ecb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dd7d7a5f3a28358d692ff7dc4616e507.setIcon(icon_c5350d8fefb4d21569c18d1a60d5ecb4);
+        
+    
+        var popup_7b2aab88af7dfc9d0d2d2cd6e9fd7e0d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_22eddfe6b97a8b0dc12387d8c51471f1 = $(`<div id="html_22eddfe6b97a8b0dc12387d8c51471f1" style="width: 100.0%; height: 100.0%;">     <strong>Zona Valle del Cauca 1</strong><br>     Latitud: 3.421<br>     Longitud: -76.532<br>     Hurtos: 70     </div>`)[0];
+                popup_7b2aab88af7dfc9d0d2d2cd6e9fd7e0d.setContent(html_22eddfe6b97a8b0dc12387d8c51471f1);
+            
+        
+
+        marker_dd7d7a5f3a28358d692ff7dc4616e507.bindPopup(popup_7b2aab88af7dfc9d0d2d2cd6e9fd7e0d)
+        ;
+
+        
+    
+    
+            var marker_6f8a3382072a16930654408aeea1ce0c = L.marker(
+                [3.436, -76.528],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_de572285f354cca74839e443a2eabaf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6f8a3382072a16930654408aeea1ce0c.setIcon(icon_de572285f354cca74839e443a2eabaf0);
+        
+    
+        var popup_4073b692edbde18b1901533433b5a49f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4ebf6e68eeab46f583d1f4f0619ffdfc = $(`<div id="html_4ebf6e68eeab46f583d1f4f0619ffdfc" style="width: 100.0%; height: 100.0%;">     <strong>Zona Valle del Cauca 2</strong><br>     Latitud: 3.436<br>     Longitud: -76.528<br>     Hurtos: 60     </div>`)[0];
+                popup_4073b692edbde18b1901533433b5a49f.setContent(html_4ebf6e68eeab46f583d1f4f0619ffdfc);
+            
+        
+
+        marker_6f8a3382072a16930654408aeea1ce0c.bindPopup(popup_4073b692edbde18b1901533433b5a49f)
+        ;
+
+        
+    
+    
+            var marker_7126c6883f54ffd7382f77f3d1efd07d = L.marker(
+                [2.455, -76.612],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_444ca204d1392d05efcf0b9cb5891da6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7126c6883f54ffd7382f77f3d1efd07d.setIcon(icon_444ca204d1392d05efcf0b9cb5891da6);
+        
+    
+        var popup_d2874ec4c571ecec651ef0316e5ff0c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_53be0502cb65ef88f6058efe22fc92d5 = $(`<div id="html_53be0502cb65ef88f6058efe22fc92d5" style="width: 100.0%; height: 100.0%;">     <strong>Zona Cauca 1</strong><br>     Latitud: 2.455<br>     Longitud: -76.612<br>     Hurtos: 40     </div>`)[0];
+                popup_d2874ec4c571ecec651ef0316e5ff0c7.setContent(html_53be0502cb65ef88f6058efe22fc92d5);
+            
+        
+
+        marker_7126c6883f54ffd7382f77f3d1efd07d.bindPopup(popup_d2874ec4c571ecec651ef0316e5ff0c7)
+        ;
+
+        
+    
+    
+            var marker_d4b5b65c5e976da4179533edd5a07198 = L.marker(
+                [2.442, -76.629],
+                {}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+        
+    
+            var icon_d09887f03fc45db89a6de2586770e8ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d4b5b65c5e976da4179533edd5a07198.setIcon(icon_d09887f03fc45db89a6de2586770e8ac);
+        
+    
+        var popup_700f78cb5ebf04c6bc3a79b29210c449 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a3e86b0d660e1c157de537f94b4cd883 = $(`<div id="html_a3e86b0d660e1c157de537f94b4cd883" style="width: 100.0%; height: 100.0%;">     <strong>Zona Cauca 2</strong><br>     Latitud: 2.442<br>     Longitud: -76.629<br>     Hurtos: 25     </div>`)[0];
+                popup_700f78cb5ebf04c6bc3a79b29210c449.setContent(html_a3e86b0d660e1c157de537f94b4cd883);
+            
+        
+
+        marker_d4b5b65c5e976da4179533edd5a07198.bindPopup(popup_700f78cb5ebf04c6bc3a79b29210c449)
+        ;
+
+        
+    
+    
+            var layer_control_bf6abee89ccee901c484e7b54d13e458_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_1db1f870bf00d15018ed6022746fe165,
+                    "Mapa Normal" : tile_layer_a7792aef763fecb54861774a40da057a,
+                    "Mapa Terreno" : tile_layer_c5c8e7c0f661aafb79245e82af2d8a55,
+                    "Mapa Blanco y Negro" : tile_layer_ad4a81d7941096952dbda6519ca92139,
+                    "Mapa Satelital" : tile_layer_a6f336f0ddd2bb358df7e1a1de869d66,
+                },
+                overlays :  {
+                    "macro_element_46f479892483061634784d26c07cce18" : heat_map_46f479892483061634784d26c07cce18,
+                },
+            };
+            let layer_control_bf6abee89ccee901c484e7b54d13e458 = L.control.layers(
+                layer_control_bf6abee89ccee901c484e7b54d13e458_layers.base_layers,
+                layer_control_bf6abee89ccee901c484e7b54d13e458_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_8a002496216799ea5332cfe94e6c9b41);
+
+        
+</script>
+</html>
